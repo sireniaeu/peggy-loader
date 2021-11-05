@@ -1,4 +1,4 @@
-import pegjs from 'pegjs';
+import * as peggy from 'peggy';
 import loaderUtils from 'loader-utils';
 
 function extractAllowedStartRules(query) {
@@ -23,7 +23,7 @@ export default function loader(source) {
   const dependencies = JSON.parse(query.dependencies || '{}');
   const allowedStartRules = extractAllowedStartRules(query);
 
-  // Description of PEG.js options: https://github.com/pegjs/pegjs#javascript-api
+  // Description of Peggy options: https://peggyjs.org/documentation.html#generating-a-parser-javascript-api
   const pegOptions = {
     cache: cacheParserResults,
     dependencies,
@@ -36,6 +36,6 @@ export default function loader(source) {
     pegOptions.allowedStartRules = allowedStartRules;
   }
 
-  const methodName = (typeof pegjs.generate === 'function') ? 'generate' : 'buildParser';
-  return pegjs[methodName](source, pegOptions);
+  const methodName = typeof peggy.generate === 'function' ? 'generate' : 'buildParser';
+  return peggy[methodName](source, pegOptions);
 }

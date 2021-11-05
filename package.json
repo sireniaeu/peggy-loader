@@ -1,31 +1,33 @@
 {
-    "name": "pegjs-loader",
+    "name": "peggy-loader",
     "version": "0.5.6",
-    "description": "PEG.js loader for webpack",
+    "description": "Peggy loader for webpack",
     "authors": [
         "Andrey Subbotin <andrey@subbotin.me> (https://github.com/eploko)",
-        "Victor Homyakov (https://github.com/victor-homyakov)"
+        "Victor Homyakov (https://github.com/victor-homyakov)",
+        "Jonathan <jonathan@sirenia.eu>"
     ],
     "license": "MIT",
     "main": "lib/index.js",
     "jsnext:main": "src/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/eploko/pegjs-loader"
+        "url": "https://github.com/sireniaeu/peggy-loader"
     },
     "keywords": [
         "webpack",
+        "peggy",
         "pegjs",
         "peg.js",
         "peg",
         "loader"
     ],
     "bugs": {
-        "url": "https://github.com/eploko/pegjs-loader/issues"
+        "url": "https://github.com/sireniaeu/peggy-loader/issues"
     },
-    "homepage": "http://eploko.github.io/pegjs-loader",
+    "homepage": "http://sireniaeu.github.io/peggy-loader",
     "peerDependencies": {
-        "pegjs": "^0.10.0",
+        "peggy": "^1.2.0",
         "webpack": ">=1"
     },
     "dependencies": {
@@ -33,7 +35,7 @@
     },
     "devDependencies": {
         "babel": "^5.5.8",
-        "babel-core": "^5.6.18",
+        "babel-core": "^6.26.3",
         "babel-eslint": "^4.1.0",
         "babel-loader": "^5.1.4",
         "eslint": "~> 4.18.2",
@@ -42,7 +44,7 @@
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-react": "^7.14.2",
         "lodash": ">=4.17.12",
-        "pegjs": "^0.10.0",
+        "peggy": "^1.2.0",
         "rimraf": "^2.3.4",
         "webpack": "1.12.2"
     },
