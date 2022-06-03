@@ -6,9 +6,9 @@
 
 ## Install
 
-`npm install --save-dev pegjs-loader pegjs webpack`
+`npm install --save-dev peggy-loader peggy webpack`
 
-The pegjs-loader requires [PEG.js](https://github.com/pegjs/pegjs) and [webpack](https://github.com/webpack/webpack)
+The peggy-loader requires [PEGGY](https://peggyjs.org/) and [webpack](https://github.com/webpack/webpack)
 as [`peerDependency`](https://docs.npmjs.com/files/package.json#peerdependencies). Thus you are able to specify the required versions accurately.
 
 ## Usage
@@ -16,8 +16,8 @@ as [`peerDependency`](https://docs.npmjs.com/files/package.json#peerdependencies
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` js
-var parser = require("!pegjs!./parser.pegjs");
-// => returns compiled PEG.js parser
+var parser = require("!peggy!./parser.pegjs");
+// => returns compiled PEGGY parser
 ```
 
 ### Apply via webpack config
@@ -31,7 +31,7 @@ module.exports = {
     loaders: [
       {
         test: /\.pegjs$/,
-        loader: 'pegjs-loader'
+        loader: 'peggy-loader'
       }
     ]
   }
@@ -42,7 +42,7 @@ Then you only need to write: `require("./parser.pegjs")`.
 
 ### PEG.js options
 
-You can pass options to PEG.js as [query parameters](http://webpack.github.io/docs/using-loaders.html#query-parameters). The following options are supported:
+You can pass options to Peggy as [query parameters](http://webpack.github.io/docs/using-loaders.html#query-parameters). The following options are supported:
 
   * `allowedStartRules` - The rules the built parser will be allowed to start
     parsing from (default: the first rule in the grammar).
@@ -67,7 +67,7 @@ module.exports = {
     loaders: [
       {
         test: /\.pegjs$/,
-        loader: 'pegjs-loader?cache=true&optimize=size&allowedStartRules[]=RuleA,allowedStartRules[]=RuleB&trace=true'
+        loader: 'peggy-loader?cache=true&optimize=size&allowedStartRules[]=RuleA,allowedStartRules[]=RuleB&trace=true'
       }
     ]
   }
