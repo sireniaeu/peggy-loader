@@ -1,4 +1,4 @@
-# [PEG.js](https://github.com/pegjs/pegjs) loader for [webpack](http://webpack.github.io/)
+# [Peggy](https://github.com/peggyjs/peggy) loader for [webpack](http://webpack.github.io/)
 
 [![build status](https://img.shields.io/travis/eploko/pegjs-loader/master.svg?style=flat-square)](https://travis-ci.org/eploko/pegjs-loader)
 [![npm version](https://img.shields.io/npm/v/pegjs-loader.svg?style=flat-square)](https://www.npmjs.com/package/pegjs-loader)
@@ -8,7 +8,7 @@
 
 `npm install --save-dev pegjs-loader pegjs webpack`
 
-The pegjs-loader requires [PEG.js](https://github.com/pegjs/pegjs) and [webpack](https://github.com/webpack/webpack)
+The pegjs-loader requires [peggy](https://github.com/peggyjs/peggy) and [webpack](https://github.com/webpack/webpack)
 as [`peerDependency`](https://docs.npmjs.com/files/package.json#peerdependencies). Thus you are able to specify the required versions accurately.
 
 ## Usage
